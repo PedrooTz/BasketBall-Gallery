@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 100px 1fr 100px;
+    padding-left: 96px;
+    padding-right: 96px;
+    background-color: gray;
+}
+header{
+    text-align: center;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ver_mais{
+    border-radius: 50px;
+    background-color: orange;
+    align-items: center;
+    width: 100px;
+    height: 35px;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: center;
+}
+.ver_mais:hover{
+    background-color: orange;
+    border-style: solid;
+    border-color: orange;
+    transform: scale(1.1);
+}
+.ver_mais * {
+    text-decoration: none;
+    color: black;
+}
+p+p{
+    color: orange;
+}
+.galeria{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+        "f1 f1 f1 f1 f1 f2 f2 f2 f3 f3 f3"
+        "f1 f1 f1 f1 f1 f4 f4 f4 f5 f5 f5"
+        "f6 f6 f6 f7 f7 f7 f8 f8 f8 f8 f8";
+
+    gap: 12px;
+}
+.foto{
+    position: relative;
+    box-shadow: 0px 0px 4px black;
+    background-color: yellow;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+.foto:nth-child(1){
+    grid-area: f1;
+    background-image: url(./img/principal2.jpg);
+    background-position: top;
+}
+.foto:nth-child(2){
+    grid-area: f2;
+    background-image:url(./img/jamorant2.jfif);
+}
+.foto:nth-child(3){
+    grid-area: f3;
+    background-image: url(./img/steph2.jpg);
+}
+.foto:nth-child(4){
+    grid-area: f4;
+    background-image: url(./img/trae2.jfif);
+}
+.foto:nth-child(5){
+    grid-area: f5;
+    background-image: url(./img/shaq2.jpeg);  
+}
+.foto:nth-child(6){
+    grid-area: f6;
+    background-image: url(./img/img\ 2.webp);
+    background-position: center;
+}
+.foto:nth-child(7){
+    grid-area: f7;
+    background-image: url(./img/kobe2.png);
+}
+.foto:nth-child(8){
+    grid-area: f8;
+    background-image: url(./img/quadra2.jpeg);
+}
+.foto__info{
+    width: 100%;
+    background-color: #0009;
+    position: absolute;
+    height: 48px;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: 1s;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.foto:hover > .foto__info{
+    transform: translateY(0%);
+
+}
+img[alt~="botao"] {
+    height: 2em;
+    width: 2em;
+}
+
+@media(max-width:768px){
+    body{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .galeria{
+        flex-direction:column;
+        display: flex;
+  }
+  .foto{
+      width: 100%;
+      height: 33vh;
+  }
+  h1{
+      place-items: center;
+      place-content: center;
+      text-align: center;
+      
+  }
+
+  
+      
+  }
+ 
+  
+  
+ 
+
+
+
+
